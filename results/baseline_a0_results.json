@@ -1,0 +1,27 @@
+{
+  "model": "A0_TwoImage_UNet_Scratch",
+  "parameters": 1929601,
+  "epochs": 3,
+  "device": "mps",
+  "training_time_sec": 3.91,
+  "final_train_loss": 0.4448,
+  "val_iou_30m": 0.5722,
+  "checkpoint_file": "results/checkpoints/baseline_a0.pt",
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.4578,
+      "val_iou_30m": 0.4737
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.4465,
+      "val_iou_30m": 0.5347
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.4448,
+      "val_iou_30m": 0.5722
+    }
+  ]
+}

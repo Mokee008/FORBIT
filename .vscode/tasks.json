@@ -1,0 +1,68 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "🚀 Start Backend Server",
+      "type": "shell",
+      "command": ".venv/bin/python",
+      "args": ["scripts/serve.py"],
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "new",
+        "focus": true
+      }
+    },
+    {
+      "label": "🧪 Test Backend Server & Endpoints",
+      "type": "shell",
+      "command": ".venv/bin/python",
+      "args": ["scripts/test_backend.py"],
+      "problemMatcher": [],
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "focus": true
+      }
+    },
+    {
+      "label": "🔬 Run Extension Module Tests",
+      "type": "shell",
+      "command": "PYTHONPATH=. .venv/bin/python tests/test_extension_modules.py",
+      "problemMatcher": [],
+      "group": "test",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      }
+    },
+    {
+      "label": "🛰️ Run Real-World Data Pipeline Audit",
+      "type": "shell",
+      "command": "PYTHONPATH=. .venv/bin/python scripts/verify_real_world_pipeline.py",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      }
+    },
+    {
+      "label": "🌲 Regenerate 8 Forest Reports & Manifests",
+      "type": "shell",
+      "command": ".venv/bin/python scripts/generate_all_8_forest_reports.py",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      }
+    }
+  ]
+}

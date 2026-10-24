@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "rule": "R1: No pretrained backbones, weights, or external ML data products",
+  "scanned_directories": [
+    "src",
+    "scripts",
+    "web"
+  ],
+  "violations_count": 0,
+  "violations": [],
+  "checked_at": "2026-10-24T16:38:13Z",
+  "weight_init_policy": "All torch modules explicitly initialized with kaiming_normal_ / zeros_ at instantiation."
+}

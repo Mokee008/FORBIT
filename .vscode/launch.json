@@ -1,0 +1,71 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "🚀 Start FOREST HEARTBEAT Backend Server",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/scripts/serve.py",
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}:${workspaceFolder}/src"
+      }
+    },
+    {
+      "name": "🧪 Test All Backend Endpoints (test_backend.py)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/scripts/test_backend.py",
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}:${workspaceFolder}/src"
+      }
+    },
+    {
+      "name": "🔬 Run Extension Modules Audit (test_extension_modules.py)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/tests/test_extension_modules.py",
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}:${workspaceFolder}/src"
+      }
+    },
+    {
+      "name": "🛰️ Run Real-World Validation Pipeline",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/scripts/verify_real_world_pipeline.py",
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}:${workspaceFolder}/src"
+      }
+    },
+    {
+      "name": "🌲 Regenerate All 8 Forest Reports & Manifests",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/scripts/generate_all_8_forest_reports.py",
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}:${workspaceFolder}/src"
+      }
+    },
+    {
+      "name": "🛡️ Audit Zero-Pretrained Weights (AST Checker)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/scripts/audit_no_pretrained.py",
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}:${workspaceFolder}/src"
+      }
+    }
+  ]
+}

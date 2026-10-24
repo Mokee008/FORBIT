@@ -1,0 +1,197 @@
+/* FOREST HEARTBEAT Cinematic Dark Styling */
+
+:root {
+  --color-bg: #09090b;
+  --color-panel: #18181b;
+  --color-border: #27272a;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: var(--color-bg);
+}
+
+font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.print-only {
+  display: none;
+}
+
+#real-satellite-map {
+  width: 100%;
+  height: 100%;
+  min-height: 480px;
+  background-color: #0c0a09;
+}
+
+#swipe-divider {
+  z-index: 600 !important;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: none;
+}
+
+#swipe-divider:hover {
+  background-color: #38bdf8;
+  box-shadow: 0 0 20px #38bdf8;
+}
+
+.leaflet-container {
+  background-color: #09090b;
+  font-family: inherit;
+}
+
+/* Custom crosshair pulse animation */
+@keyframes pulse {
+  0% { transform: scale(0.95); opacity: 0.9; }
+  50% { transform: scale(1.15); opacity: 0.6; }
+  100% { transform: scale(0.95); opacity: 0.9; }
+}
+
+#satellite-curtain-viewport {
+  position: relative;
+  overflow: hidden;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: none;
+}
+
+#curtain-before-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  border-right: 2px solid #ffffff;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.85);
+  pointer-events: none;
+}
+
+#curtain-handle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  cursor: ew-resize;
+  z-index: 50;
+  pointer-events: auto;
+}
+
+#curtain-handle:hover > div {
+  transform: scale(1.15);
+  box-shadow: 0 0 20px #38bdf8;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #09090b;
+}
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+}
+
+/* Nav button active states */
+.nav-btn.active {
+  background-color: #059669;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(5, 150, 105, 0.25);
+}
+
+/* ECG Pulse Animation */
+@keyframes ecg-line {
+  0% { stroke-dashoffset: 1000; }
+  100% { stroke-dashoffset: 0; }
+}
+
+.ecg-path {
+  stroke-dasharray: 1000;
+  animation: ecg-line 2.5s ease-out forwards;
+}
+
+/* Print Styles for Forest Dossier PDF */
+@media print {
+  @page {
+    size: letter portrait;
+    margin: 0.45in;
+  }
+
+  body {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+  }
+  header, nav, #judge-mode-toggle, #export-dossier-btn, .nav-btn, .screen-only,
+  #scene-s2-heartbeat, #scene-p2-monthly, #scene-s4-court, #scene-s6-proof,
+  #scene-s7-failures, #scene-s9-card, #judge-mode-modal {
+    display: none !important;
+  }
+  main {
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  #scene-s0-mission {
+    display: block !important;
+    margin: 0 !important;
+  }
+  #scene-s0-mission > .grid {
+    display: grid !important;
+    grid-template-columns: 0.9fr 1.1fr !important;
+    gap: 0.25in !important;
+  }
+  #scene-s0-mission > .grid > :first-child {
+    display: block !important;
+  }
+  #scene-s0-mission > .grid > :last-child {
+    height: 4.2in !important;
+  }
+  #print-dossier-details {
+    display: block !important;
+    margin-top: 0.14in;
+    padding-top: 0.12in;
+    border-top: 1px solid #d1d5db;
+    color: #111827 !important;
+  }
+  #print-dossier-details div + div {
+    margin-top: 0.06in;
+  }
+  .bg-neutral-900, .bg-neutral-950 {
+    background-color: #ffffff !important;
+    border-color: #e5e7eb !important;
+    color: #111827 !important;
+  }
+  .text-white {
+    color: #111827 !important;
+  }
+  .text-neutral-400, .text-neutral-500 {
+    color: #4b5563 !important;
+  }
+  #map-viewport {
+    height: 4.2in !important;
+  }
+  #map-canvas-container {
+    height: 100% !important;
+  }
+  #area-results-panel {
+    border-color: #d1d5db !important;
+  }
+  #area-results-panel .text-red-400 {
+    color: #b91c1c !important;
+  }
+  #area-results-panel .text-emerald-400 {
+    color: #047857 !important;
+  }
+  #area-results-panel .text-amber-400,
+  #area-results-panel .text-amber-300 {
+    color: #92400e !important;
+  }
+}
